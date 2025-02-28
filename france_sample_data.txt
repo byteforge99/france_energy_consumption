@@ -1,0 +1,103 @@
+### **Energy Performance Observatory**
+### **Data Dictionary**
+
+#### **Version History**
+| Version | Date        | Author | Description |
+|---------|------------|--------|-------------|
+| 0.1     | 12/12/2019 | PIT    | Document creation |
+| 1.0     | 20/01/2020 | PIT    | Simplification of the model for performance extraction and addition of reference tables for values. |
+| 2.0     | 03/06/2020 | RC     | Completeness with all data tables and reference tables. Formatting applied. |
+| 2.1     | 08/06/2020 | GA     | Addition of geocoding fields. |
+
+---
+
+### **Table of Contents**
+1. **Introduction**
+2. **General Information**
+   - 2.1 Format of availability
+   - 2.2 Data structure
+3. **Description of Fields**
+   - 3.1 Energy consumption
+   - 3.2 Greenhouse gas emissions
+   - 3.3 Building characteristics
+   - 3.4 Thermal properties
+   - 3.5 Geographic and climate factors
+4. **Reference Tables**
+   - 4.1 Energy classification
+   - 4.2 Building categories
+   - 4.3 Geographical zones
+5. **Appendices**
+
+---
+
+## **1. Introduction**
+This document serves as the **official data dictionary** for the **Energy Performance Observatory (DPE)**. It outlines key variables and their definitions to facilitate data analysis and interpretation related to energy performance and emissions.
+
+## **2. General Information**
+### **2.1 Format of Data Availability**
+Data is provided in **structured format** (CSV, JSON, SQL database) to ensure ease of access and integration into analytical tools.
+
+### **2.2 Data Structure**
+Each dataset includes **unique identifiers, numerical values, categorical fields, and geolocation data**.
+
+## **3. Description of Fields**
+
+### **3.1 Energy Consumption**
+- **energy_consumption**: Total energy consumption of the building (kWh/year)
+- **energy_consumption_class**: Classification of energy consumption (A to G scale)
+- **energy_tariffs_order_date**: Date when energy tariffs were last updated
+
+### **3.2 Greenhouse Gas Emissions**
+- **ges_estimation**: Estimated greenhouse gas emissions (kg CO2/year)
+- **ges_estimation_class**: Classification of GHG emissions (A to G scale)
+
+### **3.3 Building Characteristics**
+- **building_type_id**: Unique identifier for the building type
+- **construction_year**: Year the building was constructed
+- **habitable_surface**: Total habitable surface area (m²)
+- **thermal_lot_surface**: Heated surface area (m²)
+- **number_of_levels**: Number of floors in the building
+- **number_of_shops**: Number of commercial spaces in the building (if applicable)
+
+### **3.4 Thermal Properties**
+- **glass_roof_presence**: Indicates if a glass roof is present (Yes/No)
+- **glass_roof_surface**: Total area of the glass roof (m²)
+- **heat_loss_top_floors_surface**: Area of top floors contributing to heat loss (m²)
+- **heat_loss_bottom_floors_surface**: Area of bottom floors contributing to heat loss (m²)
+- **north_facing_bay_windows_surface**: Surface area of north-facing bay windows (m²)
+
+### **3.5 Geographic and Climate Factors**
+- **latitude, longitude**: Geographic coordinates of the building
+- **department_id**: Unique identifier for administrative department
+- **department_low_ext_temp**: Minimum external temperature recorded in the department (°C)
+- **winter_zone_id**: Classification of the region based on winter climate conditions
+- **summer_zone_id**: Classification of the region based on summer climate conditions
+
+## **4. Reference Tables**
+
+### **4.1 Energy Classification**
+| Class | Energy Consumption (kWh/m²/year) |
+|-------|--------------------------------|
+| A     | ≤ 50                           |
+| B     | 51 - 90                        |
+| C     | 91 - 150                       |
+| D     | 151 - 230                      |
+| E     | 231 - 330                      |
+| F     | 331 - 450                      |
+| G     | > 450                          |
+
+### **4.2 Building Categories**
+- **Residential buildings**
+- **Commercial spaces** (shopping centers, offices, hotels)
+- **Industrial facilities**
+- **Public institutions** (schools, hospitals, administrative buildings)
+
+### **4.3 Geographical Zones**
+- **Winter Zone Classification:** Based on average winter temperatures and heating degree days
+- **Summer Zone Classification:** Based on cooling degree days and solar exposure
+
+## **5. Appendices**
+- Glossary of terms
+- Data sources
+- Explanation of geolocation codes
+
